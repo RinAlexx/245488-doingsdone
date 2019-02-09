@@ -42,6 +42,16 @@ $tasks = [
 		'is_done' => false
 	]
 ];
+
+function item_count($task_array, $name_of_project) {
+	$item_sum = 0;
+	foreach ($task_array as $key => $value) {
+		if ($value['category'] == $name_of_project) {
+		$item_sum += 1;
+		}
+	}
+	return $item_sum;
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -90,7 +100,8 @@ $tasks = [
 					<?php foreach ($projects as $value): ?>
 						<li class="main-navigation__list-item">
                             <a class="main-navigation__list-item-link" href="#"><?=$value; ?></a>
-                            <span class="main-navigation__list-item-count">0</span>
+							<span class="main-navigation__list-item-count"><?=item_count($tasks, $value); ?>
+							</span>
                         </li>
 					<?php endforeach; ?>
                     </ul>
@@ -132,7 +143,7 @@ $tasks = [
 							unset($tasks[$key1]);
 						endif;
 					endforeach; ?>
-					
+
 					<?php foreach ($tasks as $key => $item): ?>
 					<tr class="tasks__item task
 					<?php if ($item['is_done']): ?>
