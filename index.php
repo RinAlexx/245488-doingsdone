@@ -8,37 +8,37 @@ $tasks = [
 	[
 		'name' => 'Собеседование в IT компании',
 		'date_complete' => '01.12.2019',
-		'category' => $projects[2],
+		'category' => 2,
 		'is_done' => false
 	],
 	[
 		'name' => 'Выполнить тестовое задание',
 		'date_complete' => '25.12.2019',
-		'category' => $projects[2],
+		'category' => 2,
 		'is_done' => false
 	],
 	[
 		'name' => 'Сделать задание первого раздела',
 		'date_complete' => '21.12.2019',
-		'category' => $projects[1],
+		'category' => 1,
 		'is_done' => true
 	],
 	[
 		'name' => 'Встреча с другом',
 		'date_complete' => '22.12.2019',
-		'category' => $projects[0],
+		'category' => 0,
 		'is_done' => false
 	],
 	[
 		'name' => 'Купить корм для кота',
 		'date_complete' => 'Нет',
-		'category' => $projects[3],
+		'category' => 3,
 		'is_done' => false
 	],
 	[
 		'name' => 'Заказать пиццу',
 		'date_complete' => 'Нет',
-		'category' => $projects[3],
+		'category' => 3,
 		'is_done' => false
 	]
 ];
@@ -97,10 +97,10 @@ function item_count($task_array, $name_of_project) {
 
                 <nav class="main-navigation">
                     <ul class="main-navigation__list">
-					<?php foreach ($projects as $value): ?>
+					<?php foreach ($projects as $key => $value): ?>
 						<li class="main-navigation__list-item">
                             <a class="main-navigation__list-item-link" href="#"><?=$value; ?></a>
-							<span class="main-navigation__list-item-count"><?=item_count($tasks, $value); ?>
+							<span class="main-navigation__list-item-count"><?=item_count($tasks, $key); ?>
 							</span>
                         </li>
 					<?php endforeach; ?>
