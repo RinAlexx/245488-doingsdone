@@ -8,8 +8,7 @@ $layout_content = include_template('layout.php', [
 	'content' => $page_content,
 	'projects' => $projects,
 	'title' => 'Дела в порядке',
-	'tasks' => $tasks,
-	'show_complete_tasks' => $show_complete_tasks
+	'tasks' => $tasks
 ]);
 
 print($layout_content);
