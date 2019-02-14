@@ -25,13 +25,10 @@
 	</div>
 
 	<table class="tasks">
-		<?php foreach ($tasks as $key1 => $item1):
-			if ($show_complete_tasks == 0 && $item1['is_done']):
-				unset($tasks[$key1]);
-			endif;
-		endforeach; ?>
-
-		<?php foreach ($tasks as $key => $item): ?>
+		<?php foreach ($tasks as $key => $item):
+			if ($show_complete_tasks == 0 && $item['is_done']):
+				continue;
+			endif; ?>
 		<tr class="tasks__item task
 		<?php if ($item['is_done']): ?>
 			task--completed
