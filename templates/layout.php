@@ -36,9 +36,8 @@
             </div>
         </header>
 
-            <main class="content__main">
-                <?=$content; ?>
-            </main>
+		<div class="content">
+            <?=$content; ?>
         </div>
     </div>
 </div>
