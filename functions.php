@@ -28,4 +28,11 @@ function item_count ($task_array, $name_of_project) {
 	return $item_sum;
 }
 
-?>
+function important_task ($task_done) {
+    $date_done = strtotime($task_done);
+    $date_now = time();
+
+    $time_to_complete = ($date_done - $date_now) / 3600;
+
+    return $time_to_complete;
+}
