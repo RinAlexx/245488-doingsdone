@@ -1,7 +1,5 @@
 <?php
 
-date_default_timezone_set("Europe/Moscow");
-
 require_once('boot.php');
 
 $page_content = include_template('index.php', [
