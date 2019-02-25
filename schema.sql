@@ -7,7 +7,7 @@ USE doingsdone;
 CREATE table projects (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	user_id INT NOT NULL,
-	project_name CHAR(128) NOT NULL
+	project_name VARCHAR(128) NOT NULL
 );
 
 CREATE table tasks (
@@ -17,17 +17,17 @@ CREATE table tasks (
 	creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	complete_date TIMESTAMP,
 	status TINYINT(1) DEFAULT NULL,
-	task_name CHAR(128) NOT NULL,
-	file CHAR,
+	task_name VARCHAR(128) NOT NULL,
+	file VARCHAR,
 	deadline TIMESTAMP NOT NULL
 );
 
 CREATE table users (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	email CHAR(128) NOT NULL UNIQUE,
-	login CHAR(30) NOT NULL UNIQUE,
-	password CHAR(30) NOT NULL
+	email VARCHAR(128) NOT NULL UNIQUE,
+	login VARCHAR(30) NOT NULL UNIQUE,
+	password CHAR(128) NOT NULL
 );
 
 CREATE UNIQUE INDEX mail ON users(email);
