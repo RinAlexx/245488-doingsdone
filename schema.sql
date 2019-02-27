@@ -27,7 +27,7 @@ CREATE table users (
 	registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	email VARCHAR(128) NOT NULL UNIQUE,
 	login VARCHAR(30) NOT NULL UNIQUE,
-	password CHAR(128) NOT NULL
+	password VARCHAR(128) NOT NULL
 );
 
 CREATE UNIQUE INDEX mail ON users(email);
