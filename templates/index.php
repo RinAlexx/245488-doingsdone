@@ -53,7 +53,7 @@
 			task--completed
 		<?php endif; ?>
 
-		<?php if (isset($item['date_complete'])  && important_task ($item['date_complete']) <= 1): ?>
+		<?php if (isset($item['date_complete'])  && important_task ($item['date_complete']) <= 24): ?>
 			task--important
 		<?php endif; ?> ">
 

@@ -29,12 +29,11 @@ function item_count ($task_array, $name_of_project) {
 }
 
 function important_task ($task_done) {
-    $date_done = date_create($task_done);
-    $date_now = date_create("now");
+	$date_done = strtotime($task_done);
+	$date_now = time();
 
-    $diff = date_diff($date_done, $date_now);
-
-	$time_to_complete = date_interval_format($diff, "%d");
+    $time_to_complete = floor(($date_done - $date_now) / 3600);
 
     return $time_to_complete;
+
 }
