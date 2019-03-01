@@ -5,7 +5,8 @@ require_once('boot.php');
 $page_content = include_template('index.php', [
 	'tasks' => $tasks,
 	'show_complete_tasks' => $show_complete_tasks,
-	'projects' => $projects
+	'projects' => $projects,
+
 ]);
 
 $layout_content = include_template('layout.php', [

@@ -51,7 +51,11 @@
 		<tr class="tasks__item task
 		<?php if ($item['is_done']): ?>
 			task--completed
-		<?php endif; ?>>">
+		<?php endif; ?>
+
+		<?php if (isset($item['date_complete'])  && important_task ($item['date_complete']) <= 24): ?>
+			task--important
+		<?php endif; ?> ">
 
 			<td class="task__select">
 				<label class="checkbox task__checkbox">
