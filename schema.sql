@@ -16,10 +16,10 @@ CREATE table tasks (
 	project_id INT NOT NULL,
 	creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	complete_date TIMESTAMP,
-	status TINYINT(1) DEFAULT NULL,
+	status TINYINT(1) DEFAULT 0,
 	task_name VARCHAR(128) NOT NULL,
-	file VARCHAR,
-	deadline TIMESTAMP NOT NULL
+	file VARCHAR(128),
+	deadline TIMESTAMP
 );
 
 CREATE table users (
