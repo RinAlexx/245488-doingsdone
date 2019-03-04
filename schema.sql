@@ -18,7 +18,7 @@ CREATE table tasks (
 	complete_date TIMESTAMP,
 	status TINYINT(1) DEFAULT 0,
 	task_name VARCHAR(128) NOT NULL,
-	file VARCHAR(128),
+	file VARCHAR(512),
 	deadline TIMESTAMP
 );
 
@@ -27,7 +27,8 @@ CREATE table users (
 	registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	email VARCHAR(128) NOT NULL UNIQUE,
 	login VARCHAR(30) NOT NULL UNIQUE,
-	password VARCHAR(128) NOT NULL
+	password VARCHAR(128) NOT NULL,
+	photo VARCHAR(512)
 );
 
 CREATE UNIQUE INDEX mail ON users(email);
