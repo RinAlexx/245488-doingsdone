@@ -12,8 +12,11 @@ VALUES ('2', '3', NULL, DEFAULT, 'Собеседование в IT компан�
 	('2', '4', NULL, DEFAULT, 'Купить корм для кота', '', NULL),
 	('2', '4', NULL, DEFAULT, 'Заказать пиццу', '', NULL);
 
-SELECT t.id, status, task_name, deadline, project_name FROM tasks t
-JOIN projects p ON t.project_id = p.id WHERE t.project_id = 3;
+SELECT * FROM tasks
+WHERE user_id = 1;
+
+SELECT * FROM tasks 
+WHERE project_id = 3;
 
 UPDATE tasks SET status = 1, complete_date = CURRENT_TIMESTAMP
 WHERE task_name = 'Заказать пиццу';
