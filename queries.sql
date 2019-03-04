@@ -12,10 +12,10 @@ VALUES ('2', '3', NULL, DEFAULT, 'Собеседование в IT компан�
 	('2', '4', NULL, DEFAULT, 'Купить корм для кота', '', NULL),
 	('2', '4', NULL, DEFAULT, 'Заказать пиццу', '', NULL);
 
-SELECT * FROM tasks
+SELECT * FROM projects
 WHERE user_id = 1;
 
-SELECT * FROM tasks 
+SELECT * FROM tasks
 WHERE project_id = 3;
 
 UPDATE tasks SET status = 1, complete_date = CURRENT_TIMESTAMP
